@@ -2,12 +2,12 @@ import firebase from 'firebase';
 
 try {
   var config = {
-    apiKey: "AIzaSyCcwN3_GASYF9XLh4K_IVWtq2e45PP3m4I",
-    authDomain: "pharos-todo.firebaseapp.com",
-    databaseURL: "https://pharos-todo.firebaseio.com",
-    projectId: "pharos-todo",
-    storageBucket: "pharos-todo.appspot.com",
-    messagingSenderId: "1098868099303"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID
   };
   firebase.initializeApp(config);
 } catch (e) {
