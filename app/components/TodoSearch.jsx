@@ -1,17 +1,17 @@
-var React = require('react');
-var {connect} = require('react-redux');
+import React, {Component} from 'react';
+let {connect} = require('react-redux');
 
-var actions = require('actions');
+let actions = require('actions');
 
-export class TodoSearch extends React.Component {
+export class TodoSearch extends Component {
   render () {
-    var {dispatch, showCompleted, searchText} = this.props;
+    let {dispatch, showCompleted, searchText} = this.props;
 
     return (
       <div className="container__header">
         <div>
           <input type="search" ref="searchText" placeholder="Search todos" value={searchText} onChange={() => {
-              var searchText = this.refs.searchText.value;
+              let searchText = this.refs.searchText.value;
               dispatch(actions.setSearchText(searchText));
           }}/>
         </div>

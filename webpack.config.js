@@ -55,7 +55,8 @@ module.exports = {
       './app/actions',
       './app/reducers',
       './app/store',
-      './app/firebase'
+      './app/firebase',
+      './app/playground'
     ],
     alias: {
       app: 'app',

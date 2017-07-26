@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
 import * as Redux from 'react-redux';
 
+import SimpleComponent from 'SimpleComponent';
 import * as actions from 'actions';
 
-export class Login extends React.Component {
+export class Login extends Component {
   constructor (props) {
     super(props);
+
     this.onLogin = this.onLogin.bind(this);
   }
 
   onLogin () {
-    var {dispatch} = this.props;
+    let {dispatch} = this.props;
     dispatch(actions.startLogin());
   }
 
@@ -27,6 +29,7 @@ export class Login extends React.Component {
             </div>
           </div>
         </div>
+        <SimpleComponent textPlaceholder={'real text placeholder'}/>
       </div>
     )
   }

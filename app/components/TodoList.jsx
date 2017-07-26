@@ -1,14 +1,14 @@
-var React = require('react');
-var {connect} = require('react-redux');
+import React, {Component} from 'react';
+let {connect} = require('react-redux');
 
 import Todo from 'Todo';
-var TodoAPI = require('TodoAPI');
+let TodoAPI = require('TodoAPI');
 
-export class TodoList extends React.Component {
+export class TodoList extends Component {
   render () {
-    var {todos, showCompleted, searchText} = this.props;
-    var renderTodos = () => {
-      var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
+    let {todos, showCompleted, searchText} = this.props;
+    let renderTodos = () => {
+      let filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
 
       if (filteredTodos.length === 0) {
         return (
